@@ -71,7 +71,7 @@ def create_data_all():
 #Read 其中一筆資料
 @app.route("/read_data/<user_name>")
 def read_data(user_name=None):
-    user = User.query.filter_by(name = user_name).first()
+    user = PlayerInfo.query.filter_by(name = user_name).first()
     return json.dumps([user.name,user.age])
 
 ####Update####
